@@ -1,29 +1,41 @@
 const options = ['rock', 'paper', 'scissors']
 
+let randomChoice
+let playerSelection
+let computerSelection
+let computerScore
+let playerScore 
+
 function getComputerChoice() {
-  let randomChoice = options[Math.floor(Math.random() * 3)]
+  randomChoice = options[Math.floor(Math.random() * 3)]
   return randomChoice
 }
 
 function playRound(playerSelection, computerSelection) {
+  playerSelection = 'rOcK'.toLowerCase()
+  computerSelection = getComputerChoice().toLowerCase()
 
   if (playerSelection === computerSelection) {
-    return console.log(`Os dois valores são iguais: ${playerSelection}`)
+    let txt = `Os dois valores são os mesmos: ${playerSelection}`
+    return txt
   } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-    playerSelection++
-    return console.log('VENCEU! Player escolhe rock. IA escolhe scissors.')
+    let txt = 'VENCEU! Player escolhe rock. IA escolhe scissors.'
+    return txt
   } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-    computerSelection++
-    return console.log('PERDEU! Vc escolheu rock, a IA escolheu paper!')
+    let txt = 'PERDEU! Vc escolheu rock, a IA escolheu paper!'
+    return txt
   } else if (playerSelection !== 'rock') {
-    return console.log('Insira um valor válido.')
+    let txt = 'Insira um valor válido.'
+    return txt
   }
 }
 
-const playerSelection = 'rOcK'.toLowerCase()
-const computerSelection = getComputerChoice()
-// console.log(computerSelection)
+console.log(playRound(playerSelection, computerSelection))
 
-// function game(){
-//   for 
+// console.log(playRound(playerSelection, computerSelection))
+
+// function game() {
+//   for (i = 0; i < 5; i++) {
+//     playRound(playerSelection, computerSelection)
+//   }
 // }
