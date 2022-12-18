@@ -10,8 +10,10 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     return console.log(`Os dois valores são iguais: ${playerSelection}`)
   } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+    playerSelection++
     return console.log('VENCEU! Player escolhe rock. IA escolhe scissors.')
   } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+    computerSelection++
     return console.log('PERDEU! Vc escolheu rock, a IA escolheu paper!')
   } else if (playerSelection !== 'rock') {
     return console.log('Insira um valor válido.')
@@ -20,9 +22,8 @@ function playRound(playerSelection, computerSelection) {
 
 const playerSelection = 'rOcK'.toLowerCase()
 const computerSelection = getComputerChoice()
-console.log(computerSelection)
+// console.log(computerSelection)
 
-playGame(playerSelection, computerSelection)
-
-// NOTE completo até tópico 4
-
+// function game(){
+//   for 
+// }
