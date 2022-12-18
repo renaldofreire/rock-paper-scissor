@@ -5,7 +5,7 @@ function getComputerChoice() {
   return randomChoice
 }
 
-function playGame(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
 
   if (playerSelection === computerSelection) {
     return console.log(`Os dois valores são iguais: ${playerSelection}`)
